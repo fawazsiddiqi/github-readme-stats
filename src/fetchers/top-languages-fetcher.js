@@ -91,12 +91,9 @@ async function fetchTopLanguages(username, langsCount = 5, exclude_repo = []) {
     }, {});
 
   const topLangs = Object.keys(repoNodes)
-<<<<<<< HEAD
     .slice(0, 10)
-=======
     .sort((a, b) => repoNodes[b].size - repoNodes[a].size)
     .slice(0, langsCount)
->>>>>>> f3c39506b2138a2b95ded736d24982c9fcd21b3f
     .reduce((result, key) => {
       result[key] = repoNodes[key];
       return result;
